@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: <TBD>
+spec:
+  replicas: 1
+  revisionHistoryLimit: 3
+  selector:
+    matchLabels:
+      app: <TBD>
+  template:
+    metadata:
+      labels:
+        app: <TBD>
+    spec:
+      serviceAccountName: <TBD>
+      containers:
+      - image: <TBD>
+        name: <TBD>
+        ports:
+        - containerPort: <TBD>

@@ -1,0 +1,16 @@
+# Tiltfile
+
+# Define the Kubernetes manifests (YAML files) to deploy
+k8s_yaml('k8s/deployment.yaml')
+k8s_resource('<DEFINE RESOURCE NAME>', port_forwards=<SET YOUR PORT>)
+allow_k8s_contexts('<DEFINE YOUR KUBE CONTEXT>')
+
+# Define the Dockerfile to build your application
+docker_build('<DEFINE YOUR CONTAINER REGISTRY like ghcr.io/username/repo>', '.', 
+    dockerfile='Dockerfile')
+
+# Specify the source code files to watch for changes
+# watch_file('*/.go')
+
+# Specify the command to run your application
+# local('go run cmd/main.go')
